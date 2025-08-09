@@ -32,29 +32,29 @@ Control: HC-SR04 echo via external interrupt (D2); Periodic sampling via hardwar
 • Breadboard, jumper wires, power from Nano 3.3 V rail
 
 # Pin mapping
-# _Power & Ground_
+1. _Power & Ground_
 • Nano 3.3V → breadboard + rail (use for sensors and pot)
 • Nano GND → breadboard − rail
 
-# _HC-SR04_
+2. _HC-SR04_
 • VCC → 3.3V
 • GND → GND
 • TRIG → D3
 • ECHO → D2 (external interrupt)
 
-# _BH1750 (I²C)_
+3. _BH1750 (I²C)_
 • VCC → 3.3V
 • GND → GND
 • SDA → A4
 • SCL → A5
 • AD0/ADDR → leave floating or tie to GND (default 0x23)
 
-# _Potentiometer_
+4. _Potentiometer_
 • VCC → 3.3V
 • GND → GND
 • Wiper → A0 (confirm OTA/OTB; test with simple analogRead sketch)
 
-# _Actuators_
+5. _Actuators_
 • Red LED anode → D8 → (220 Ω) → GND
 • Green LED anode → D9 → (220 Ω) → GND
 • Buzzer + → D10, − → GND (add resistor or transistor if needed)
