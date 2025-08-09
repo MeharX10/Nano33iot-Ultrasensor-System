@@ -95,5 +95,12 @@ All logic is non-blocking and contained in one file `TaskM1.cpp`.
 3. Open `TaskM1.cpp` in the IDE.  
 4. Select **Arduino Nano 33 IoT** board and correct port.  
 5. Upload the sketch.  
-6. Open Serial Monitor at **115200 baud**.  
+6. Open Serial Monitor at **115200 baud**.
+
+---
+
+## Troubleshooting
+- If `potRaw` stays small, confirm wiper pin (OTA vs OTB) and power rails. Test with a minimal `analogRead(A0)` sketch.  
+- HC-SR04 may need 3.3V on Nano 33 IoT; avoid relying on the 5V rail. If powering at 5V, use a level shifter or voltage divider on **ECHO**.  
+- BH1750 library may show warnings about SAMD metadata; the sensor works on Nano 33 IoT — verify wiring if readings are invalid.  
 
